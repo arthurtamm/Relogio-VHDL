@@ -1,0 +1,28 @@
+Referência
+
+Valor 0 - RAM[0]
+Valor 1 - RAM[1]
+Valor 10 - RAM[10]
+
+Valores da contagem
+Valor das unidades - RAM[11]
+Valor das dezenas - RAM[12]
+Valor das centenas - RAM[13]
+Valor dos milhares - RAM[14]
+Valor dos dezena de milhares - RAM[15]
+Valor das centenas de milhares - RAM[16]
+
+Flag de inibir contagem - RAM[17]
+
+Valores da contagem do limite
+Valor das unidades - RAM[21]
+Valor das dezenas - RAM[22]
+Valor das centenas - RAM[23]
+Valor dos milhares - RAM[24]
+Valor dos dezena de milhares - RAM[25]
+Valor das centenas de milhares - RAM[26]
+
+LED de overflow - RAM[258]
+LED de limite atingido - RAM[257]
+
+## Lembrete: possível implementação de nova instrucao é chamada de subrotina com um argumento
