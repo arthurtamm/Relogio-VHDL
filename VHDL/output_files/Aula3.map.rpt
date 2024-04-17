@@ -1,0 +1,1418 @@
+Analysis & Synthesis report for Aula3
+Wed Apr 17 15:57:26 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |Contador2
+ 13. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo
+ 14. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2
+ 15. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3
+ 16. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4
+ 17. Parameter Settings for User Entity Instance: memoriaROM:ROM1
+ 18. Parameter Settings for User Entity Instance: memoriaRAM:RAM
+ 19. Parameter Settings for User Entity Instance: CPU:CPU
+ 20. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1
+ 21. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico8x1:MUX2
+ 22. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGA
+ 23. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGB
+ 24. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGC
+ 25. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGD
+ 26. Parameter Settings for User Entity Instance: CPU:CPU|subtraiConstante:decrementaSUB
+ 27. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:incrementaSUB
+ 28. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUXSUB
+ 29. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGSUB
+ 30. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGRA
+ 31. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGRB
+ 32. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGRC
+ 33. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGRD
+ 34. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
+ 35. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:incrementaPC
+ 36. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
+ 37. Parameter Settings for User Entity Instance: LEDS:LEDS|registradorGenerico:REGLEDR
+ 38. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD0
+ 39. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD1
+ 40. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD2
+ 41. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD3
+ 42. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD4
+ 43. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD5
+ 44. Port Connectivity Checks: "decoder3x8:DecEnd"
+ 45. Port Connectivity Checks: "decoder3x8:DecBloco"
+ 46. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffkfpgar"
+ 47. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk2"
+ 48. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk1"
+ 49. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk0"
+ 50. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD5"
+ 51. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD4"
+ 52. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD3"
+ 53. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD2"
+ 54. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD1"
+ 55. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD0"
+ 56. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD5"
+ 57. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD4"
+ 58. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD3"
+ 59. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD2"
+ 60. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD1"
+ 61. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD0"
+ 62. Port Connectivity Checks: "LEDS:LEDS|registradorBinario:REGLED2"
+ 63. Port Connectivity Checks: "LEDS:LEDS|registradorBinario:REGLED1"
+ 64. Port Connectivity Checks: "LEDS:LEDS|registradorGenerico:REGLEDR"
+ 65. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 66. Port Connectivity Checks: "CPU:CPU|muxGenerico8x1:MUX2"
+ 67. Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo"
+ 68. Post-Synthesis Netlist Statistics for Top Partition
+ 69. Elapsed Time Per Partition
+ 70. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Apr 17 15:57:26 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Aula3                                       ;
+; Top-level Entity Name           ; Contador2                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 60                                          ;
+; Total pins                      ; 77                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; Contador2          ; Aula3              ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; SubtraiConstatnte.vhd            ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/SubtraiConstatnte.vhd          ;         ;
+; muxGenerico8x1.vhd               ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico8x1.vhd             ;         ;
+; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/decoderInstru.vhd              ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/memoriaROM.vhd                 ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/somaConstante.vhd              ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/memoriaRAM.vhd                 ;         ;
+; registradorBinario.vhd           ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/registradorBinario.vhd         ;         ;
+; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/logicaDesvio.vhd               ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd                        ;         ;
+; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/decoder3x8.vhd                 ;         ;
+; LEDS.vhd                         ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/LEDS.vhd                       ;         ;
+; Contador2.vhd                    ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd                  ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/conversorHex7Seg.vhd           ;         ;
+; Displays.vhd                     ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Displays.vhd                   ;         ;
+; Switchs.vhd                      ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Switchs.vhd                    ;         ;
+; Keys.vhd                         ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Keys.vhd                       ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd             ;         ;
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/ULASomaSub.vhd                 ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/registradorGenerico.vhd        ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/edgeDetector.vhd               ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerico.vhd            ;         ;
+; divisorGenerio_e_Interface.vhd   ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerio_e_Interface.vhd ;         ;
+; muxBinario.vhd                   ; yes             ; User VHDL File  ; C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxBinario.vhd                 ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 62             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 96             ;
+;     -- 7 input functions                    ; 2              ;
+;     -- 6 input functions                    ; 16             ;
+;     -- 5 input functions                    ; 19             ;
+;     -- 4 input functions                    ; 40             ;
+;     -- <=3 input functions                  ; 19             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 60             ;
+;                                             ;                ;
+; I/O pins                                    ; 77             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 60             ;
+; Total fan-out                               ; 733            ;
+; Average fan-out                             ; 2.36           ;
++---------------------------------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name         ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+---------------------+--------------+
+; |Contador2                          ; 96 (1)              ; 60 (0)                    ; 0                 ; 0          ; 77   ; 0            ; |Contador2                                       ; Contador2           ; work         ;
+;    |CPU:CPU|                        ; 49 (0)              ; 19 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU                               ; CPU                 ; work         ;
+;       |ULASomaSub:ULA1|             ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|ULASomaSub:ULA1               ; ULASomaSub          ; work         ;
+;       |decoderInstru:DECODER|       ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|decoderInstru:DECODER         ; decoderInstru       ; work         ;
+;       |muxGenerico2x1:MUX1|         ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|muxGenerico2x1:MUX1           ; muxGenerico2x1      ; work         ;
+;       |registradorBinario:REGequal| ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|registradorBinario:REGequal   ; registradorBinario  ; work         ;
+;       |registradorBinario:REGneg|   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|registradorBinario:REGneg     ; registradorBinario  ; work         ;
+;       |registradorGenerico:PC|      ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|registradorGenerico:PC        ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGA|    ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|registradorGenerico:REGA      ; registradorGenerico ; work         ;
+;       |somaConstante:incrementaPC|  ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|somaConstante:incrementaPC    ; somaConstante       ; work         ;
+;    |LEDS:LEDS|                      ; 1 (0)               ; 9 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|LEDS:LEDS                             ; LEDS                ; work         ;
+;       |registradorBinario:REGLED1|  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|LEDS:LEDS|registradorBinario:REGLED1  ; registradorBinario  ; work         ;
+;       |registradorGenerico:REGLEDR| ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|LEDS:LEDS|registradorGenerico:REGLEDR ; registradorGenerico ; work         ;
+;    |decoder3x8:DecEnd|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|decoder3x8:DecEnd                     ; decoder3x8          ; work         ;
+;    |memoriaRAM:RAM|                 ; 30 (30)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Contador2|memoriaRAM:RAM                        ; memoriaRAM          ; work         ;
+;    |memoriaROM:ROM1|                ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|memoriaROM:ROM1                       ; memoriaROM          ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                      ;
++-------------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                             ; Reason for Removal                          ;
++-------------------------------------------------------------------------------------------+---------------------------------------------+
+; Keys:Keys|registradorBinario:ffk2|DOUT                                                    ; Lost fanout                                 ;
+; Keys:Keys|edgeDetector:detectorK2|saidaQ                                                  ; Lost fanout                                 ;
+; Keys:Keys|registradorBinario:ffk1|DOUT                                                    ; Lost fanout                                 ;
+; Keys:Keys|edgeDetector:detectorK1|saidaQ                                                  ; Lost fanout                                 ;
+; Keys:Keys|registradorBinario:ffk0|DOUT                                                    ; Lost fanout                                 ;
+; Keys:Keys|edgeDetector:detectorK0|saidaQ                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[1]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[1]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[0]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[0,2]                                                ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[2]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[3]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[3]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[4]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[4]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[5]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[5]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[6]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[6]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[7]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[7]                                                  ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo|DOUT  ; Lost fanout                                 ;
+; Keys:Keys|registradorBinario:ffkfpgar|DOUT                                                ; Lost fanout                                 ;
+; Keys:Keys|edgeDetector:detectorFPGAR|saidaQ                                               ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[0]     ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|tick            ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[1..11] ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[0..2]  ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|tick            ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[3..17] ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[0..3]  ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|tick            ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[4..21] ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0..7]   ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick             ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[8..24]  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGD|DOUT[0..7]                                               ; Lost fanout                                 ;
+; Displays:Displays|registradorGenerico:REGD0|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
+; Displays:Displays|registradorGenerico:REGD1|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
+; Displays:Displays|registradorGenerico:REGD2|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
+; Displays:Displays|registradorGenerico:REGD3|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
+; Displays:Displays|registradorGenerico:REGD4|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
+; Displays:Displays|registradorGenerico:REGD5|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
+; LEDS:LEDS|registradorBinario:REGLED2|DOUT                                                 ; Stuck at GND due to stuck port data_in      ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[0]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[0]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[0]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[0]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[1]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[1]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[1]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[1]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[2]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[2]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[2]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[2]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[3]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[3]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[3]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[3]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[4]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[4]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[4]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[4]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[5]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[5]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[5]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[5]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[6]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[6]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[6]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[6]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[7]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[7]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[7]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[7]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[8]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[8]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[8]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[8]                                                 ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGSUB|DOUT[0..7]                                             ; Lost fanout                                 ;
+; memoriaRAM:RAM|ram~31                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~95                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~47                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~111                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~63                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~127                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~39                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~103                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~55                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~119                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~71                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~135                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~48                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~56                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~112                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~120                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~32                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~40                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~64                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~72                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~96                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~104                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~128                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~136                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~33                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~97                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~49                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~113                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~65                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~129                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~41                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~105                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~57                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~121                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~73                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~137                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~50                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~58                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~114                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~122                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~34                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~42                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~66                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~74                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~98                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~106                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~130                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~138                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~35                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~99                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~51                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~115                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~67                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~131                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~43                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~107                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~59                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~123                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~75                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~139                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~52                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~60                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~116                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~124                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~36                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~44                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~68                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~76                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~100                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~108                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~132                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~140                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~37                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~101                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~53                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~117                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~69                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~133                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~45                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~109                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~61                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~125                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~77                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~141                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~54                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~62                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~118                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~126                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~38                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~46                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~70                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~78                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~102                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~110                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~134                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~142                                                                    ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 279                                                   ;                                             ;
++-------------------------------------------------------------------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                            ;
++---------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
+; Register name                                                                         ; Reason for Removal ; Registers Removed due to This Register                                                    ;
++---------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
+; CPU:CPU|registradorGenerico:REGB|DOUT[1]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGB|DOUT[0],                                                 ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo|DOUT, ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|tick,           ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[6],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[7],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[8],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[9],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|tick,           ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[8],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[9],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[10],   ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[11],   ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|tick,           ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[9],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[10],   ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[11],   ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[12],   ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick,            ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[13],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[14],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[15],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[16],    ;
+;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGD|DOUT[0], CPU:CPU|registradorGenerico:REGD|DOUT[1],       ;
+;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGD|DOUT[3], CPU:CPU|registradorGenerico:REGD|DOUT[4]        ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[7]  ; Lost Fanouts       ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[6],     ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[5],     ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[4],     ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[3],     ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[2],     ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[1],     ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0],     ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[8],     ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[9],     ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[10],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[11],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[12]     ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[3] ; Lost Fanouts       ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[2],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[1],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[0],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[4],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[5],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[6],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[7],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[8]     ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[2] ; Lost Fanouts       ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[1],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[0],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[3],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[4],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[5],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[6],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[7]     ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[0] ; Lost Fanouts       ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[1],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[2],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[3],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[4],    ;
+;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[5]     ;
+; CPU:CPU|registradorGenerico:REGSUB|DOUT[7]                                            ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGSUB|DOUT[3],                                               ;
+;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGSUB|DOUT[2],                                               ;
+;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGSUB|DOUT[1],                                               ;
+;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGSUB|DOUT[0]                                                ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[5]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGB|DOUT[5], CPU:CPU|registradorGenerico:REGD|DOUT[5]        ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[6]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGB|DOUT[6], CPU:CPU|registradorGenerico:REGD|DOUT[6]        ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[7]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGB|DOUT[7], CPU:CPU|registradorGenerico:REGD|DOUT[7]        ;
+; Keys:Keys|registradorBinario:ffk2|DOUT                                                ; Lost Fanouts       ; Keys:Keys|edgeDetector:detectorK2|saidaQ                                                  ;
+; Keys:Keys|registradorBinario:ffk1|DOUT                                                ; Lost Fanouts       ; Keys:Keys|edgeDetector:detectorK1|saidaQ                                                  ;
+; Keys:Keys|registradorBinario:ffk0|DOUT                                                ; Lost Fanouts       ; Keys:Keys|edgeDetector:detectorK0|saidaQ                                                  ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[2]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGD|DOUT[2]                                                  ;
+; Keys:Keys|registradorBinario:ffkfpgar|DOUT                                            ; Lost Fanouts       ; Keys:Keys|edgeDetector:detectorFPGAR|saidaQ                                               ;
++---------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 60    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 18    ;
+; Number of registers using Asynchronous Clear ; 19    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 49    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |Contador2|CPU:CPU|registradorGenerico:PC|DOUT[4]   ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 20 LEs               ; 5 LEs                  ; Yes        ; |Contador2|CPU:CPU|registradorGenerico:PC|DOUT[0]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|ULASomaSub:ULA1|saida[2]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[4] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[1] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|decoderInstru:DECODER|saida[5]   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|logicaDesvio:DESVIO|saida[0]     ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|decoderInstru:DECODER|saida[2]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Contador2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguraDados   ; 8     ; Signed Integer                                   ;
+; larguraRAM     ; 6     ; Signed Integer                                   ;
+; larguraAddr    ; 9     ; Signed Integer                                   ;
+; larguraInst    ; 15    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo ;
++----------------+----------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                                      ;
++----------------+----------+-------------------------------------------------------------------------------------------+
+; divisor        ; 25000000 ; Signed Integer                                                                            ;
++----------------+----------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2 ;
++----------------+---------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                                        ;
++----------------+---------+---------------------------------------------------------------------------------------------+
+; divisor        ; 2500000 ; Signed Integer                                                                              ;
++----------------+---------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3 ;
++----------------+--------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                         ;
++----------------+--------+----------------------------------------------------------------------------------------------+
+; divisor        ; 250000 ; Signed Integer                                                                               ;
++----------------+--------+----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4 ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; divisor        ; 2500  ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaROM:ROM1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; datawidth      ; 15    ; Signed Integer                      ;
+; addrwidth      ; 9     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaRAM:RAM ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; datawidth      ; 8     ; Signed Integer                     ;
+; addrwidth      ; 6     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; larguradados   ; 8     ; Signed Integer              ;
+; larguraaddr    ; 9     ; Signed Integer              ;
+; largurainst    ; 15    ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico8x1:MUX2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGA ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGB ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGC ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGD ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|subtraiConstante:decrementaSUB ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                             ;
+; constante      ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:incrementaSUB ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                          ;
+; constante      ; 1     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUXSUB ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGSUB ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGRA ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGRB ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGRC ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGRD ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:incrementaPC ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                         ;
+; constante      ; 1     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LEDS:LEDS|registradorGenerico:REGLEDR ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD0 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD1 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD2 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD3 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD4 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD5 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decoder3x8:DecEnd"                                                                         ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; saida[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decoder3x8:DecBloco"                                                                       ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; saida[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys:Keys|registradorBinario:ffkfpgar" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                          ;
+; enable ; Input ; Info     ; Stuck at VCC                          ;
++--------+-------+----------+---------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk2" ;
++--------+-------+----------+-----------------------------------+
+; Port   ; Type  ; Severity ; Details                           ;
++--------+-------+----------+-----------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                      ;
+; enable ; Input ; Info     ; Stuck at VCC                      ;
++--------+-------+----------+-----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk1" ;
++--------+-------+----------+-----------------------------------+
+; Port   ; Type  ; Severity ; Details                           ;
++--------+-------+----------+-----------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                      ;
+; enable ; Input ; Info     ; Stuck at VCC                      ;
++--------+-------+----------+-----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk0" ;
++--------+-------+----------+-----------------------------------+
+; Port   ; Type  ; Severity ; Details                           ;
++--------+-------+----------+-----------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                      ;
+; enable ; Input ; Info     ; Stuck at VCC                      ;
++--------+-------+----------+-----------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD5" ;
++----------+-------+----------+----------------------------------------+
+; Port     ; Type  ; Severity ; Details                                ;
++----------+-------+----------+----------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                           ;
+; negativo ; Input ; Info     ; Stuck at GND                           ;
+; overflow ; Input ; Info     ; Stuck at GND                           ;
++----------+-------+----------+----------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD4" ;
++----------+-------+----------+----------------------------------------+
+; Port     ; Type  ; Severity ; Details                                ;
++----------+-------+----------+----------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                           ;
+; negativo ; Input ; Info     ; Stuck at GND                           ;
+; overflow ; Input ; Info     ; Stuck at GND                           ;
++----------+-------+----------+----------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD3" ;
++----------+-------+----------+----------------------------------------+
+; Port     ; Type  ; Severity ; Details                                ;
++----------+-------+----------+----------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                           ;
+; negativo ; Input ; Info     ; Stuck at GND                           ;
+; overflow ; Input ; Info     ; Stuck at GND                           ;
++----------+-------+----------+----------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD2" ;
++----------+-------+----------+----------------------------------------+
+; Port     ; Type  ; Severity ; Details                                ;
++----------+-------+----------+----------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                           ;
+; negativo ; Input ; Info     ; Stuck at GND                           ;
+; overflow ; Input ; Info     ; Stuck at GND                           ;
++----------+-------+----------+----------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD1" ;
++----------+-------+----------+----------------------------------------+
+; Port     ; Type  ; Severity ; Details                                ;
++----------+-------+----------+----------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                           ;
+; negativo ; Input ; Info     ; Stuck at GND                           ;
+; overflow ; Input ; Info     ; Stuck at GND                           ;
++----------+-------+----------+----------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD0" ;
++----------+-------+----------+----------------------------------------+
+; Port     ; Type  ; Severity ; Details                                ;
++----------+-------+----------+----------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                           ;
+; negativo ; Input ; Info     ; Stuck at GND                           ;
+; overflow ; Input ; Info     ; Stuck at GND                           ;
++----------+-------+----------+----------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD5" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD4" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD3" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD2" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD1" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD0" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "LEDS:LEDS|registradorBinario:REGLED2" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "LEDS:LEDS|registradorBinario:REGLED1" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "LEDS:LEDS|registradorGenerico:REGLEDR" ;
++------+-------+----------+-----------------------------------------+
+; Port ; Type  ; Severity ; Details                                 ;
++------+-------+----------+-----------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                            ;
++------+-------+----------+-----------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                   ;
++--------+-------+----------+--------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|muxGenerico8x1:MUX2" ;
++--------------+-------+----------+-----------------------+
+; Port         ; Type  ; Severity ; Details               ;
++--------------+-------+----------+-----------------------+
+; entradag_mux ; Input ; Info     ; Stuck at GND          ;
+; entradah_mux ; Input ; Info     ; Stuck at GND          ;
++--------------+-------+----------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo" ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                                                        ;
+; enable ; Input ; Info     ; Stuck at VCC                                                                        ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 60                          ;
+;     CLR               ; 1                           ;
+;     CLR SLD           ; 9                           ;
+;     ENA               ; 40                          ;
+;     ENA CLR SLD       ; 9                           ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 97                          ;
+;     arith             ; 18                          ;
+;         1 data inputs ; 9                           ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 8                           ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 77                          ;
+;         0 data inputs ; 2                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 39                          ;
+;         5 data inputs ; 11                          ;
+;         6 data inputs ; 16                          ;
+; boundary_port         ; 77                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.30                        ;
+; Average LUT depth     ; 5.64                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Wed Apr 17 15:57:14 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Relogio -c Aula3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file subtraiconstatnte.vhd
+    Info (12022): Found design unit 1: subtraiConstante-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/SubtraiConstatnte.vhd Line: 18
+    Info (12023): Found entity 1: subtraiConstante File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/SubtraiConstatnte.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico8x1.vhd
+    Info (12022): Found design unit 1: muxGenerico8x1-Behavioral File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico8x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico8x1 File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico8x1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decoderinstru.vhd
+    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/decoderInstru.vhd Line: 12
+    Info (12023): Found entity 1: decoderInstru File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/decoderInstru.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/memoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/memoriaROM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/somaConstante.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/memoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/memoriaRAM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registradorbinario.vhd
+    Info (12022): Found design unit 1: registradorBinario-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/registradorBinario.vhd Line: 12
+    Info (12023): Found entity 1: registradorBinario File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/registradorBinario.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file logicadesvio.vhd
+    Info (12022): Found design unit 1: logicaDesvio-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/logicaDesvio.vhd Line: 13
+    Info (12023): Found entity 1: logicaDesvio File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/logicaDesvio.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
+    Info (12022): Found design unit 1: CPU-arquitetura File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 24
+    Info (12023): Found entity 1: CPU File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoder3x8.vhd
+    Info (12022): Found design unit 1: decoder3x8-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/decoder3x8.vhd Line: 10
+    Info (12023): Found entity 1: decoder3x8 File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/decoder3x8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file leds.vhd
+    Info (12022): Found design unit 1: LEDS-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/LEDS.vhd Line: 18
+    Info (12023): Found entity 1: LEDS File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/LEDS.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file contador2.vhd
+    Info (12022): Found design unit 1: Contador2-arquitetura File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 29
+    Info (12023): Found entity 1: Contador2 File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file displays.vhd
+    Info (12022): Found design unit 1: Displays-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Displays.vhd Line: 21
+    Info (12023): Found entity 1: Displays File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Displays.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file switchs.vhd
+    Info (12022): Found design unit 1: Switchs-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Switchs.vhd Line: 17
+    Info (12023): Found entity 1: Switchs File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Switchs.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file keys.vhd
+    Info (12022): Found design unit 1: Keys-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Keys.vhd Line: 23
+    Info (12023): Found entity 1: Keys File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Keys.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ulasomasub.vhd
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/ULASomaSub.vhd Line: 14
+    Info (12023): Found entity 1: ULASomaSub File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/ULASomaSub.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/registradorGenerico.vhd Line: 4
+Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/edgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: divisorGenerico File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerio_e_interface.vhd
+    Info (12022): Found design unit 1: divisorGenerico_e_Interface-interface File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerio_e_Interface.vhd Line: 15
+    Info (12023): Found entity 1: divisorGenerico_e_Interface File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerio_e_Interface.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file muxbinario.vhd
+    Info (12022): Found design unit 1: muxBinario-comportamento File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxBinario.vhd Line: 13
+    Info (12023): Found entity 1: muxBinario File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxBinario.vhd Line: 4
+Info (12127): Elaborating entity "Contador2" for the top level hierarchy
+Info (12128): Elaborating entity "divisorGenerico_e_Interface" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 60
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerio_e_Interface.vhd Line: 25
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerio_e_Interface.vhd Line: 29
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerio_e_Interface.vhd Line: 33
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerio_e_Interface.vhd Line: 37
+Info (12128): Elaborating entity "muxBinario" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|muxBinario:MUX1" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerio_e_Interface.vhd Line: 46
+Info (12128): Elaborating entity "registradorBinario" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/divisorGenerio_e_Interface.vhd Line: 54
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 68
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 71
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 75
+Info (10041): Inferred latch for "saidaReg[0]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Info (10041): Inferred latch for "saidaReg[1]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Info (10041): Inferred latch for "saidaReg[2]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Info (10041): Inferred latch for "saidaReg[3]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Info (10041): Inferred latch for "saidaReg[4]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Info (10041): Inferred latch for "saidaReg[5]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Info (10041): Inferred latch for "saidaReg[6]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Info (10041): Inferred latch for "saidaReg[7]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 80
+Info (12128): Elaborating entity "muxGenerico8x1" for hierarchy "CPU:CPU|muxGenerico8x1:MUX2" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 86
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REGA" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 98
+Info (12128): Elaborating entity "subtraiConstante" for hierarchy "CPU:CPU|subtraiConstante:decrementaSUB" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 127
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaSUB" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 130
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REGRA" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 142
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaPC" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 164
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 168
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "CPU:CPU|decoderInstru:DECODER" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 171
+Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:DESVIO" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 174
+Info (12128): Elaborating entity "LEDS" for hierarchy "LEDS:LEDS" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 79
+Info (12128): Elaborating entity "Displays" for hierarchy "Displays:Displays" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 83
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Displays:Displays|registradorGenerico:REGD0" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Displays.vhd Line: 39
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "Displays:Displays|conversorHex7Seg:DECD0" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Displays.vhd Line: 59
+Info (12128): Elaborating entity "Switchs" for hierarchy "Switchs:Switchs" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 87
+Info (12128): Elaborating entity "Keys" for hierarchy "Keys:Keys" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 91
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "Keys:Keys|edgeDetector:detectorK0" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Keys.vhd Line: 47
+Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DecBloco" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 96
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer divisorGenerico_e_Interface:interfaceBaseTempo|muxBinario:MUX1|saida_MUX File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxBinario.vhd Line: 9
+    Warning (19017): Found clock multiplexer divisorGenerico_e_Interface:interfaceBaseTempo|muxBinario:MUX1|saida_MUX~0 File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxBinario.vhd Line: 9
+    Warning (19017): Found clock multiplexer divisorGenerico_e_Interface:interfaceBaseTempo|muxBinario:MUX1|saida_MUX~1 File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxBinario.vhd Line: 9
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/memoriaRAM.vhd Line: 27
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "LeituraDados[7]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "LeituraDados[6]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "LeituraDados[5]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "LeituraDados[4]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "LeituraDados[3]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "LeituraDados[2]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "LeituraDados[1]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "LeituraDados[0]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[0]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[2]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[1]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[3]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[4]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[5]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[6]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[7]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 15
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 19
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 19
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 19
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 19
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 19
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 19
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 19
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 20
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 20
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 20
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 20
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 20
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 20
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 20
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 21
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 21
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 21
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 21
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 21
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 21
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 21
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 22
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 22
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 22
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 22
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 22
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 22
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 22
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 23
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 23
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 23
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 23
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 23
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 23
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 23
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 24
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 24
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 24
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 24
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 24
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 24
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 24
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 122 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 14
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 14
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 14
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 16
+    Warning (15610): No output dependent on input pin "FPGA_RESET_N" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 18
+Info (21057): Implemented 222 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 61 output pins
+    Info (21061): Implemented 145 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Wed Apr 17 15:57:26 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:25
+
+

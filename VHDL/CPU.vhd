@@ -30,7 +30,7 @@ architecture arquitetura of CPU is
   signal saidaRegC : std_logic_vector (larguraDados-1 downto 0);
   signal saidaRegD : std_logic_vector (larguraDados-1 downto 0);
   signal saida_ULA : std_logic_vector (larguraDados-1 downto 0);
-  signal Sinais_Controle : std_logic_vector (9 downto 0);
+  signal Sinais_Controle : std_logic_vector (10 downto 0);
   signal regSel : std_logic_vector(1 downto 0);
   signal saidaReg : std_logic_vector(larguraDados-1 downto 0);
   signal Habilita_A : std_logic;
@@ -45,6 +45,7 @@ architecture arquitetura of CPU is
   signal Habilita : std_logic;
   signal Operacao_ULA : std_logic_vector (1 downto 0);
   signal Habilita_Flag : std_logic;
+  signal Habilita_Flag_L : std_logic;
   
   signal ULA_Equal : std_logic;
   signal SaidaRegEqual : std_logic;
@@ -154,7 +155,7 @@ REGequal : entity work.registradorBinario
 			port map (DIN => ULA_Equal, DOUT => SaidaRegEqual, ENABLE => Habilita_Flag, CLK => CLK, RST => Reset);
 			
 REGneg : entity work.registradorBinario 
-			port map (DIN => saida_ULA(7), DOUT => SaidaRegNeg, ENABLE => Habilita_Flag, CLK => CLK, RST => Reset);
+			port map (DIN => saida_ULA(7), DOUT => SaidaRegNeg, ENABLE => Habilita_Flag_L, CLK => CLK, RST => Reset);
 
 -- O port map completo do Program Counter.
 PC : entity work.registradorGenerico   generic map (larguraDados => LarguraAddr)
@@ -173,7 +174,8 @@ DECODER : entity work.decoderInstru
 DESVIO : entity work.logicaDesvio
 			 port map(RET => RET, JMP => JMP, saida => SelMuxJMP,
 			 habA => RethabA, habB => RethabB, habC => RethabC, habD => RethabD);
-			 
+
+Habilita_Flag_L <= Sinais_Controle(10);
 HabilitaEscritaRetorno <= Sinais_Controle(9);
 JMP <= Sinais_Controle(8);
 RET <= Sinais_Controle(7);
