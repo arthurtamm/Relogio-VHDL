@@ -19,13 +19,7 @@ DATA_RADIX=HEX;
 
 CONTENT BEGIN
 --endereco : dado;
-0 : LDI & 00 & '0' & 03;	-- LDI $3 	
-1 : STA & 00 & '0' & 01;	-- STA @1
-2 : LDI & 00 & '0' & 05;	-- LDI $5
-3 : CLT & 00 & '0' & 01;	-- CLT @1
-4 : JL & 00 & '0' & 06;	-- JL @6
-5 : JMP & 00 & '0' & 08;	-- JMP @8
-6 : LDI & 00 & '0' & 01;	-- LDI $1
-7 : STA & 00 & '1' & 00;	-- STA @256
-8 : NOP & 00 & '0' & 00;	-- NOP
+0 : LDIDDR & 00 & '1' & 00;	-- LDIDDR $256
+1 : LDI & 00 & '0' & 01;	-- LDI $1
+2 : STADDR & 00 & '0' & 00;	-- STADDR @0
 END;

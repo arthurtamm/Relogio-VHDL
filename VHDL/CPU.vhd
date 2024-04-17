@@ -30,7 +30,7 @@ architecture arquitetura of CPU is
   signal saidaRegC : std_logic_vector (larguraDados-1 downto 0);
   signal saidaRegD : std_logic_vector (larguraDados-1 downto 0);
   signal saida_ULA : std_logic_vector (larguraDados-1 downto 0);
-  signal Sinais_Controle : std_logic_vector (10 downto 0);
+  signal Sinais_Controle : std_logic_vector (12 downto 0);
   signal regSel : std_logic_vector(1 downto 0);
   signal saidaReg : std_logic_vector(larguraDados-1 downto 0);
   signal Habilita_A : std_logic;
@@ -38,6 +38,9 @@ architecture arquitetura of CPU is
   signal Habilita_C : std_logic;
   signal Habilita_D : std_logic;
   
+  signal SaidaRegAddr : std_logic_vector(larguraAddr-1 downto 0);
+  
+  signal Habilita_Reg_Addr : std_logic;
   signal HabilitaEscritaRetorno : std_logic;
   signal JMP : std_logic;
   signal RET : std_logic;
@@ -46,6 +49,7 @@ architecture arquitetura of CPU is
   signal Operacao_ULA : std_logic_vector (1 downto 0);
   signal Habilita_Flag : std_logic;
   signal Habilita_Flag_L : std_logic;
+  signal STADDR : std_logic;
   
   signal ULA_Equal : std_logic;
   signal SaidaRegEqual : std_logic;
@@ -174,7 +178,19 @@ DECODER : entity work.decoderInstru
 DESVIO : entity work.logicaDesvio
 			 port map(RET => RET, JMP => JMP, saida => SelMuxJMP,
 			 habA => RethabA, habB => RethabB, habC => RethabC, habD => RethabD);
+			 
+REGADDR : entity work.registradorGenerico   generic map (larguraDados => larguraAddr)
+          port map (DIN => Instruction_N(8 downto 0), DOUT => SaidaRegAddr, ENABLE => Habilita_Reg_Addr, CLK => CLK, RST => Reset);
+			 
+			 
+MUXADDR :  entity work.muxGenerico2x1  generic map (larguraDados => larguraAddr)
+        port map( entradaA_MUX => Instruction_N(8 downto 0),
+                 entradaB_MUX =>  SaidaRegAddr,
+                 seletor_MUX => STADDR,
+                 saida_MUX => Data_Address);
 
+STADDR <= Sinais_Controle(12);
+Habilita_Reg_Addr <= Sinais_Controle(11);
 Habilita_Flag_L <= Sinais_Controle(10);
 HabilitaEscritaRetorno <= Sinais_Controle(9);
 JMP <= Sinais_Controle(8);
@@ -217,7 +233,6 @@ Wd <= Sinais_controle(0);
 ROM_Address <= RomAddress;
 DataIn <= Data_In;
 Data_Out <= saidaReg;
-Data_Address <= Instruction_N(8 downto 0);
 regSel <= Instruction_N(10 downto 9);
 
 end architecture;

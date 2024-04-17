@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Apr 17 15:57:26 2024
+Analysis & Synthesis Status : Successful - Wed Apr 17 17:07:39 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Aula3
 Top-level Entity Name : Contador2
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 60
+Total registers : 27
 Total pins : 77
 Total virtual pins : 0
 Total block memory bits : 0

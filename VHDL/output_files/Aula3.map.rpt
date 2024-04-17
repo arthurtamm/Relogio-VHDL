@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula3
-Wed Apr 17 15:57:26 2024
+Wed Apr 17 17:07:39 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -42,40 +42,42 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  34. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
  35. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:incrementaPC
  36. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
- 37. Parameter Settings for User Entity Instance: LEDS:LEDS|registradorGenerico:REGLEDR
- 38. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD0
- 39. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD1
- 40. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD2
- 41. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD3
- 42. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD4
- 43. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD5
- 44. Port Connectivity Checks: "decoder3x8:DecEnd"
- 45. Port Connectivity Checks: "decoder3x8:DecBloco"
- 46. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffkfpgar"
- 47. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk2"
- 48. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk1"
- 49. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk0"
- 50. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD5"
- 51. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD4"
- 52. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD3"
- 53. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD2"
- 54. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD1"
- 55. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD0"
- 56. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD5"
- 57. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD4"
- 58. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD3"
- 59. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD2"
- 60. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD1"
- 61. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD0"
- 62. Port Connectivity Checks: "LEDS:LEDS|registradorBinario:REGLED2"
- 63. Port Connectivity Checks: "LEDS:LEDS|registradorBinario:REGLED1"
- 64. Port Connectivity Checks: "LEDS:LEDS|registradorGenerico:REGLEDR"
- 65. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
- 66. Port Connectivity Checks: "CPU:CPU|muxGenerico8x1:MUX2"
- 67. Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo"
- 68. Post-Synthesis Netlist Statistics for Top Partition
- 69. Elapsed Time Per Partition
- 70. Analysis & Synthesis Messages
+ 37. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGADDR
+ 38. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUXADDR
+ 39. Parameter Settings for User Entity Instance: LEDS:LEDS|registradorGenerico:REGLEDR
+ 40. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD0
+ 41. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD1
+ 42. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD2
+ 43. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD3
+ 44. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD4
+ 45. Parameter Settings for User Entity Instance: Displays:Displays|registradorGenerico:REGD5
+ 46. Port Connectivity Checks: "decoder3x8:DecEnd"
+ 47. Port Connectivity Checks: "decoder3x8:DecBloco"
+ 48. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffkfpgar"
+ 49. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk2"
+ 50. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk1"
+ 51. Port Connectivity Checks: "Keys:Keys|registradorBinario:ffk0"
+ 52. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD5"
+ 53. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD4"
+ 54. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD3"
+ 55. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD2"
+ 56. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD1"
+ 57. Port Connectivity Checks: "Displays:Displays|conversorHex7Seg:DECD0"
+ 58. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD5"
+ 59. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD4"
+ 60. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD3"
+ 61. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD2"
+ 62. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD1"
+ 63. Port Connectivity Checks: "Displays:Displays|registradorGenerico:REGD0"
+ 64. Port Connectivity Checks: "LEDS:LEDS|registradorBinario:REGLED2"
+ 65. Port Connectivity Checks: "LEDS:LEDS|registradorBinario:REGLED1"
+ 66. Port Connectivity Checks: "LEDS:LEDS|registradorGenerico:REGLEDR"
+ 67. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 68. Port Connectivity Checks: "CPU:CPU|muxGenerico8x1:MUX2"
+ 69. Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo"
+ 70. Post-Synthesis Netlist Statistics for Top Partition
+ 71. Elapsed Time Per Partition
+ 72. Analysis & Synthesis Messages
 
 
 
@@ -102,13 +104,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 17 15:57:26 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 17 17:07:39 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula3                                       ;
 ; Top-level Entity Name           ; Contador2                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 60                                          ;
+; Total registers                 ; 27                                          ;
 ; Total pins                      ; 77                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -263,25 +265,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 62             ;
+; Estimate of Logic utilization (ALMs needed) ; 21             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 96             ;
-;     -- 7 input functions                    ; 2              ;
-;     -- 6 input functions                    ; 16             ;
-;     -- 5 input functions                    ; 19             ;
-;     -- 4 input functions                    ; 40             ;
-;     -- <=3 input functions                  ; 19             ;
+; Combinational ALUT usage for logic          ; 36             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 3              ;
+;     -- 5 input functions                    ; 2              ;
+;     -- 4 input functions                    ; 13             ;
+;     -- <=3 input functions                  ; 18             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 60             ;
+; Dedicated logic registers                   ; 27             ;
 ;                                             ;                ;
 ; I/O pins                                    ; 77             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 60             ;
-; Total fan-out                               ; 733            ;
-; Average fan-out                             ; 2.36           ;
+; Maximum fan-out                             ; 27             ;
+; Total fan-out                               ; 327            ;
+; Average fan-out                             ; 1.51           ;
 +---------------------------------------------+----------------+
 
 
@@ -290,22 +292,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name         ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+---------------------+--------------+
-; |Contador2                          ; 96 (1)              ; 60 (0)                    ; 0                 ; 0          ; 77   ; 0            ; |Contador2                                       ; Contador2           ; work         ;
-;    |CPU:CPU|                        ; 49 (0)              ; 19 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU                               ; CPU                 ; work         ;
+; |Contador2                          ; 36 (0)              ; 27 (0)                    ; 0                 ; 0          ; 77   ; 0            ; |Contador2                                       ; Contador2           ; work         ;
+;    |CPU:CPU|                        ; 30 (0)              ; 18 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU                               ; CPU                 ; work         ;
 ;       |ULASomaSub:ULA1|             ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|ULASomaSub:ULA1               ; ULASomaSub          ; work         ;
-;       |decoderInstru:DECODER|       ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|decoderInstru:DECODER         ; decoderInstru       ; work         ;
-;       |muxGenerico2x1:MUX1|         ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|muxGenerico2x1:MUX1           ; muxGenerico2x1      ; work         ;
-;       |registradorBinario:REGequal| ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|registradorBinario:REGequal   ; registradorBinario  ; work         ;
-;       |registradorBinario:REGneg|   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|registradorBinario:REGneg     ; registradorBinario  ; work         ;
+;       |decoderInstru:DECODER|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|decoderInstru:DECODER         ; decoderInstru       ; work         ;
 ;       |registradorGenerico:PC|      ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|registradorGenerico:PC        ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGADDR| ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|registradorGenerico:REGADDR   ; registradorGenerico ; work         ;
 ;       |registradorGenerico:REGA|    ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|registradorGenerico:REGA      ; registradorGenerico ; work         ;
 ;       |somaConstante:incrementaPC|  ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|CPU:CPU|somaConstante:incrementaPC    ; somaConstante       ; work         ;
-;    |LEDS:LEDS|                      ; 1 (0)               ; 9 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|LEDS:LEDS                             ; LEDS                ; work         ;
-;       |registradorBinario:REGLED1|  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|LEDS:LEDS|registradorBinario:REGLED1  ; registradorBinario  ; work         ;
+;    |LEDS:LEDS|                      ; 1 (1)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|LEDS:LEDS                             ; LEDS                ; work         ;
 ;       |registradorGenerico:REGLEDR| ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|LEDS:LEDS|registradorGenerico:REGLEDR ; registradorGenerico ; work         ;
-;    |decoder3x8:DecEnd|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|decoder3x8:DecEnd                     ; decoder3x8          ; work         ;
-;    |memoriaRAM:RAM|                 ; 30 (30)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Contador2|memoriaRAM:RAM                        ; memoriaRAM          ; work         ;
-;    |memoriaROM:ROM1|                ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|memoriaROM:ROM1                       ; memoriaROM          ; work         ;
+;    |memoriaRAM:RAM|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|memoriaRAM:RAM                        ; memoriaRAM          ; work         ;
+;    |memoriaROM:ROM1|                ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Contador2|memoriaROM:ROM1                       ; memoriaROM          ; work         ;
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -315,12 +313,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------+---------------------------------------------+
 ; Register name                                                                             ; Reason for Removal                          ;
 +-------------------------------------------------------------------------------------------+---------------------------------------------+
-; Keys:Keys|registradorBinario:ffk2|DOUT                                                    ; Lost fanout                                 ;
-; Keys:Keys|edgeDetector:detectorK2|saidaQ                                                  ; Lost fanout                                 ;
-; Keys:Keys|registradorBinario:ffk1|DOUT                                                    ; Lost fanout                                 ;
-; Keys:Keys|edgeDetector:detectorK1|saidaQ                                                  ; Lost fanout                                 ;
-; Keys:Keys|registradorBinario:ffk0|DOUT                                                    ; Lost fanout                                 ;
-; Keys:Keys|edgeDetector:detectorK0|saidaQ                                                  ; Lost fanout                                 ;
 ; CPU:CPU|registradorGenerico:REGB|DOUT[1]                                                  ; Lost fanout                                 ;
 ; CPU:CPU|registradorGenerico:REGC|DOUT[1]                                                  ; Lost fanout                                 ;
 ; CPU:CPU|registradorGenerico:REGB|DOUT[0]                                                  ; Lost fanout                                 ;
@@ -336,240 +328,211 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CPU:CPU|registradorGenerico:REGB|DOUT[6]                                                  ; Lost fanout                                 ;
 ; CPU:CPU|registradorGenerico:REGC|DOUT[7]                                                  ; Lost fanout                                 ;
 ; CPU:CPU|registradorGenerico:REGB|DOUT[7]                                                  ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo|DOUT  ; Lost fanout                                 ;
-; Keys:Keys|registradorBinario:ffkfpgar|DOUT                                                ; Lost fanout                                 ;
-; Keys:Keys|edgeDetector:detectorFPGAR|saidaQ                                               ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[0]     ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|tick            ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[1..11] ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[0..2]  ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|tick            ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[3..17] ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[0..3]  ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|tick            ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[4..21] ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0..7]   ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick             ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[8..24]  ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:REGD|DOUT[0..7]                                               ; Lost fanout                                 ;
+; CPU:CPU|registradorBinario:REGneg|DOUT                                                    ; Lost fanout                                 ;
+; CPU:CPU|registradorBinario:REGequal|DOUT                                                  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRD|DOUT[0..8]                                              ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRC|DOUT[0..8]                                              ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRB|DOUT[0..8]                                              ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGRA|DOUT[0..8]                                              ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|registradorGenerico:REGD|DOUT[0]                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGADDR|DOUT[1,2,5..7]                                        ; Stuck at GND due to stuck port data_in      ;
+; CPU:CPU|registradorGenerico:REGD|DOUT[1..7]                                               ; Lost fanout                                 ;
+; Keys:Keys|registradorBinario:ffk2|DOUT                                                    ; Lost fanout                                 ;
+; Keys:Keys|edgeDetector:detectorK2|saidaQ                                                  ; Lost fanout                                 ;
+; Keys:Keys|registradorBinario:ffk1|DOUT                                                    ; Lost fanout                                 ;
+; Keys:Keys|edgeDetector:detectorK1|saidaQ                                                  ; Lost fanout                                 ;
+; Keys:Keys|registradorBinario:ffk0|DOUT                                                    ; Lost fanout                                 ;
+; Keys:Keys|edgeDetector:detectorK0|saidaQ                                                  ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGADDR|DOUT[3,4]                                             ; Stuck at GND due to stuck port data_in      ;
+; LEDS:LEDS|registradorBinario:REGLED2|DOUT                                                 ; Stuck at GND due to stuck port clock_enable ;
 ; Displays:Displays|registradorGenerico:REGD0|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
 ; Displays:Displays|registradorGenerico:REGD1|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
 ; Displays:Displays|registradorGenerico:REGD2|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
 ; Displays:Displays|registradorGenerico:REGD3|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
 ; Displays:Displays|registradorGenerico:REGD4|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
 ; Displays:Displays|registradorGenerico:REGD5|DOUT[0..3]                                    ; Stuck at GND due to stuck port clock_enable ;
-; LEDS:LEDS|registradorBinario:REGLED2|DOUT                                                 ; Stuck at GND due to stuck port data_in      ;
-; CPU:CPU|registradorGenerico:REGRA|DOUT[0]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRB|DOUT[0]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRC|DOUT[0]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRD|DOUT[0]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRA|DOUT[1]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRB|DOUT[1]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRC|DOUT[1]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRD|DOUT[1]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRA|DOUT[2]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRB|DOUT[2]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRC|DOUT[2]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRD|DOUT[2]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRA|DOUT[3]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRB|DOUT[3]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRC|DOUT[3]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRD|DOUT[3]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRA|DOUT[4]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRB|DOUT[4]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRC|DOUT[4]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRD|DOUT[4]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRA|DOUT[5]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRB|DOUT[5]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRC|DOUT[5]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRD|DOUT[5]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRA|DOUT[6]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRB|DOUT[6]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRC|DOUT[6]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRD|DOUT[6]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRA|DOUT[7]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRB|DOUT[7]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRC|DOUT[7]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRD|DOUT[7]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRA|DOUT[8]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRB|DOUT[8]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRC|DOUT[8]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGRD|DOUT[8]                                                 ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REGSUB|DOUT[0..7]                                             ; Lost fanout                                 ;
-; memoriaRAM:RAM|ram~31                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~95                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~47                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~111                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~63                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~127                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~39                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~103                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~55                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~119                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~71                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~135                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~48                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~56                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~112                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~120                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~32                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~40                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~64                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~72                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~96                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~104                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~128                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~136                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~33                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~97                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~49                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~113                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~65                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~129                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~41                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~105                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~57                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~121                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~73                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~137                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~50                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~58                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~114                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~122                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~34                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~42                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~66                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~74                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~98                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~106                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~130                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~138                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~35                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~99                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~51                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~115                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~67                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~131                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~43                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~107                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~59                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~123                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~75                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~139                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~52                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~60                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~116                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~124                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~36                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~44                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~68                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~76                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~100                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~108                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~132                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~140                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~37                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~101                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~53                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~117                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~69                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~133                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~45                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~109                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~61                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~125                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~77                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~141                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~54                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~62                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~118                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~126                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~38                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~46                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~70                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~78                                                                     ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~102                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~110                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~134                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|ram~142                                                                    ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 279                                                   ;                                             ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo|DOUT  ; Lost fanout                                 ;
+; Keys:Keys|registradorBinario:ffkfpgar|DOUT                                                ; Lost fanout                                 ;
+; Keys:Keys|edgeDetector:detectorFPGAR|saidaQ                                               ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick             ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|tick            ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|tick            ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|tick            ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0..24]  ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[0..11] ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[0..17] ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[0..21] ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGADDR|DOUT[0]                                               ; Stuck at GND due to stuck port data_in      ;
+; LEDS:LEDS|registradorBinario:REGLED1|DOUT                                                 ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~23                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~24                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~25                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~26                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~27                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~28                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~29                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~30                                                                     ; Stuck at GND due to stuck port clock_enable ;
+; memoriaRAM:RAM|ram~16                                                                     ; Lost fanout                                 ;
+; memoriaRAM:RAM|ram~17                                                                     ; Lost fanout                                 ;
+; memoriaRAM:RAM|ram~18                                                                     ; Lost fanout                                 ;
+; memoriaRAM:RAM|ram~19                                                                     ; Lost fanout                                 ;
+; memoriaRAM:RAM|ram~20                                                                     ; Lost fanout                                 ;
+; memoriaRAM:RAM|ram~21                                                                     ; Lost fanout                                 ;
+; memoriaRAM:RAM|ram~22                                                                     ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:REGSUB|DOUT[0..7]                                             ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 209                                                   ;                                             ;
 +-------------------------------------------------------------------------------------------+---------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                            ;
-+---------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
-; Register name                                                                         ; Reason for Removal ; Registers Removed due to This Register                                                    ;
-+---------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
-; CPU:CPU|registradorGenerico:REGB|DOUT[1]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGB|DOUT[0],                                                 ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo|DOUT, ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|tick,           ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[6],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[7],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[8],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[9],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|tick,           ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[8],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[9],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[10],   ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[11],   ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|tick,           ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[9],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[10],   ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[11],   ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[12],   ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick,            ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[13],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[14],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[15],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[16],    ;
-;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGD|DOUT[0], CPU:CPU|registradorGenerico:REGD|DOUT[1],       ;
-;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGD|DOUT[3], CPU:CPU|registradorGenerico:REGD|DOUT[4]        ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[7]  ; Lost Fanouts       ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[6],     ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[5],     ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[4],     ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[3],     ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[2],     ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[1],     ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0],     ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[8],     ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[9],     ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[10],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[11],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[12]     ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[3] ; Lost Fanouts       ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[2],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[1],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[0],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[4],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[5],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[6],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[7],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[8]     ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[2] ; Lost Fanouts       ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[1],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[0],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[3],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[4],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[5],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[6],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[7]     ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[0] ; Lost Fanouts       ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[1],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[2],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[3],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[4],    ;
-;                                                                                       ;                    ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[5]     ;
-; CPU:CPU|registradorGenerico:REGSUB|DOUT[7]                                            ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGSUB|DOUT[3],                                               ;
-;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGSUB|DOUT[2],                                               ;
-;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGSUB|DOUT[1],                                               ;
-;                                                                                       ;                    ; CPU:CPU|registradorGenerico:REGSUB|DOUT[0]                                                ;
-; CPU:CPU|registradorGenerico:REGC|DOUT[5]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGB|DOUT[5], CPU:CPU|registradorGenerico:REGD|DOUT[5]        ;
-; CPU:CPU|registradorGenerico:REGC|DOUT[6]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGB|DOUT[6], CPU:CPU|registradorGenerico:REGD|DOUT[6]        ;
-; CPU:CPU|registradorGenerico:REGC|DOUT[7]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGB|DOUT[7], CPU:CPU|registradorGenerico:REGD|DOUT[7]        ;
-; Keys:Keys|registradorBinario:ffk2|DOUT                                                ; Lost Fanouts       ; Keys:Keys|edgeDetector:detectorK2|saidaQ                                                  ;
-; Keys:Keys|registradorBinario:ffk1|DOUT                                                ; Lost Fanouts       ; Keys:Keys|edgeDetector:detectorK1|saidaQ                                                  ;
-; Keys:Keys|registradorBinario:ffk0|DOUT                                                ; Lost Fanouts       ; Keys:Keys|edgeDetector:detectorK0|saidaQ                                                  ;
-; CPU:CPU|registradorGenerico:REGB|DOUT[2]                                              ; Lost Fanouts       ; CPU:CPU|registradorGenerico:REGD|DOUT[2]                                                  ;
-; Keys:Keys|registradorBinario:ffkfpgar|DOUT                                            ; Lost Fanouts       ; Keys:Keys|edgeDetector:detectorFPGAR|saidaQ                                               ;
-+---------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                              ;
++---------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------+
+; Register name                               ; Reason for Removal             ; Registers Removed due to This Register                                                    ;
++---------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------+
+; CPU:CPU|registradorGenerico:REGB|DOUT[1]    ; Lost Fanouts                   ; CPU:CPU|registradorGenerico:REGB|DOUT[0], CPU:CPU|registradorGenerico:REGD|DOUT[0],       ;
+;                                             ;                                ; CPU:CPU|registradorGenerico:REGD|DOUT[1],                                                 ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|registradorBinario:registraUmSegundo|DOUT, ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick,            ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|tick,           ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|tick,           ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|tick,           ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[7],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[6],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[5],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[4],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[3],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[2],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[1],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[8],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[9],     ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[10],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[11],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[12],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[13],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[14],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[15],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[16],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[17],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[18],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[19],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[20],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[21],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[22],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[23],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[24],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[0],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[1],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[2],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[3],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[4],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[5],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[6],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[7],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[8],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[9],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[10],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo4|contador[11],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[2],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[1],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[0],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[3],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[4],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[5],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[6],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[7],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[8],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[9],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[10],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[11],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[12],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[13],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[14],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[15],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[16],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo3|contador[17],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[3],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[2],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[1],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[0],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[4],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[5],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[6],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[7],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[8],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[9],    ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[10],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[11],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[12],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[13],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[14],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[15],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[16],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[17],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[18],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[19],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[20],   ;
+;                                             ;                                ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo2|contador[21]    ;
+; CPU:CPU|registradorGenerico:REGADDR|DOUT[5] ; Stuck at GND                   ; Keys:Keys|registradorBinario:ffk2|DOUT, Keys:Keys|edgeDetector:detectorK2|saidaQ,         ;
+;                                             ; due to stuck port data_in      ; Keys:Keys|registradorBinario:ffk1|DOUT, Keys:Keys|edgeDetector:detectorK1|saidaQ,         ;
+;                                             ;                                ; Keys:Keys|registradorBinario:ffk0|DOUT, Keys:Keys|edgeDetector:detectorK0|saidaQ,         ;
+;                                             ;                                ; LEDS:LEDS|registradorBinario:REGLED2|DOUT,                                                ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD0|DOUT[3],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD0|DOUT[2],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD0|DOUT[1],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD0|DOUT[0],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD1|DOUT[3],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD1|DOUT[2],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD1|DOUT[1],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD1|DOUT[0],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD2|DOUT[3],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD2|DOUT[2],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD2|DOUT[1],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD2|DOUT[0],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD3|DOUT[3],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD3|DOUT[2],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD3|DOUT[1],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD3|DOUT[0],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD4|DOUT[3],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD4|DOUT[2],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD4|DOUT[1],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD4|DOUT[0],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD5|DOUT[3],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD5|DOUT[2],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD5|DOUT[1],                                      ;
+;                                             ;                                ; Displays:Displays|registradorGenerico:REGD5|DOUT[0],                                      ;
+;                                             ;                                ; Keys:Keys|registradorBinario:ffkfpgar|DOUT,                                               ;
+;                                             ;                                ; Keys:Keys|edgeDetector:detectorFPGAR|saidaQ,                                              ;
+;                                             ;                                ; LEDS:LEDS|registradorBinario:REGLED1|DOUT                                                 ;
+; CPU:CPU|registradorBinario:REGequal|DOUT    ; Stuck at GND                   ; CPU:CPU|registradorGenerico:REGSUB|DOUT[2],                                               ;
+;                                             ; due to stuck port clock_enable ; CPU:CPU|registradorGenerico:REGSUB|DOUT[1],                                               ;
+;                                             ;                                ; CPU:CPU|registradorGenerico:REGSUB|DOUT[0],                                               ;
+;                                             ;                                ; CPU:CPU|registradorGenerico:REGSUB|DOUT[7],                                               ;
+;                                             ;                                ; CPU:CPU|registradorGenerico:REGSUB|DOUT[6],                                               ;
+;                                             ;                                ; CPU:CPU|registradorGenerico:REGSUB|DOUT[5],                                               ;
+;                                             ;                                ; CPU:CPU|registradorGenerico:REGSUB|DOUT[4],                                               ;
+;                                             ;                                ; CPU:CPU|registradorGenerico:REGSUB|DOUT[3]                                                ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[5]    ; Lost Fanouts                   ; CPU:CPU|registradorGenerico:REGB|DOUT[5], CPU:CPU|registradorGenerico:REGD|DOUT[5]        ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[6]    ; Lost Fanouts                   ; CPU:CPU|registradorGenerico:REGB|DOUT[6], CPU:CPU|registradorGenerico:REGD|DOUT[6]        ;
+; CPU:CPU|registradorGenerico:REGC|DOUT[7]    ; Lost Fanouts                   ; CPU:CPU|registradorGenerico:REGB|DOUT[7], CPU:CPU|registradorGenerico:REGD|DOUT[7]        ;
+; CPU:CPU|registradorGenerico:REGB|DOUT[2]    ; Lost Fanouts                   ; CPU:CPU|registradorGenerico:REGD|DOUT[2]                                                  ;
+; CPU:CPU|registradorGenerico:REGADDR|DOUT[2] ; Stuck at GND                   ; CPU:CPU|registradorGenerico:REGD|DOUT[3]                                                  ;
+;                                             ; due to stuck port data_in      ;                                                                                           ;
+; memoriaRAM:RAM|ram~24                       ; Stuck at GND                   ; memoriaRAM:RAM|ram~16                                                                     ;
+;                                             ; due to stuck port clock_enable ;                                                                                           ;
+; memoriaRAM:RAM|ram~25                       ; Stuck at GND                   ; memoriaRAM:RAM|ram~17                                                                     ;
+;                                             ; due to stuck port clock_enable ;                                                                                           ;
+; memoriaRAM:RAM|ram~26                       ; Stuck at GND                   ; memoriaRAM:RAM|ram~18                                                                     ;
+;                                             ; due to stuck port clock_enable ;                                                                                           ;
+; memoriaRAM:RAM|ram~27                       ; Stuck at GND                   ; memoriaRAM:RAM|ram~19                                                                     ;
+;                                             ; due to stuck port clock_enable ;                                                                                           ;
+; memoriaRAM:RAM|ram~28                       ; Stuck at GND                   ; memoriaRAM:RAM|ram~20                                                                     ;
+;                                             ; due to stuck port clock_enable ;                                                                                           ;
+; memoriaRAM:RAM|ram~29                       ; Stuck at GND                   ; memoriaRAM:RAM|ram~21                                                                     ;
+;                                             ; due to stuck port clock_enable ;                                                                                           ;
+; memoriaRAM:RAM|ram~30                       ; Stuck at GND                   ; memoriaRAM:RAM|ram~22                                                                     ;
+;                                             ; due to stuck port clock_enable ;                                                                                           ;
++---------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -577,12 +540,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 60    ;
+; Total registers                              ; 27    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 18    ;
-; Number of registers using Asynchronous Clear ; 19    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 49    ;
+; Number of registers using Clock Enable       ; 17    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -592,14 +555,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |Contador2|CPU:CPU|registradorGenerico:PC|DOUT[4]   ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 20 LEs               ; 5 LEs                  ; Yes        ; |Contador2|CPU:CPU|registradorGenerico:PC|DOUT[0]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|ULASomaSub:ULA1|saida[2]         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[4] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[1] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|decoderInstru:DECODER|saida[5]   ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|logicaDesvio:DESVIO|saida[0]     ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|decoderInstru:DECODER|saida[2]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Contador2|CPU:CPU|registradorGenerico:PC|DOUT[0]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Contador2|CPU:CPU|registradorGenerico:REGA|DOUT[4] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[1] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|decoderInstru:DECODER|saida[5]   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Contador2|CPU:CPU|logicaDesvio:DESVIO|saida        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
@@ -860,6 +820,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------+
 ; larguradados   ; 8     ; Signed Integer                              ;
 +----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGADDR ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUXADDR ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1173,30 +1153,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 60                          ;
-;     CLR               ; 1                           ;
-;     CLR SLD           ; 9                           ;
-;     ENA               ; 40                          ;
-;     ENA CLR SLD       ; 9                           ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 97                          ;
+; arriav_ff             ; 27                          ;
+;     CLR               ; 10                          ;
+;     ENA               ; 9                           ;
+;     ENA CLR SLD       ; 8                           ;
+; arriav_lcell_comb     ; 38                          ;
 ;     arith             ; 18                          ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 8                           ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 77                          ;
+;         4 data inputs ; 8                           ;
+;     normal            ; 20                          ;
 ;         0 data inputs ; 2                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 39                          ;
-;         5 data inputs ; 11                          ;
-;         6 data inputs ; 16                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 3                           ;
 ; boundary_port         ; 77                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.30                        ;
-; Average LUT depth     ; 5.64                        ;
+; Max LUT depth         ; 3.70                        ;
+; Average LUT depth     ; 2.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1215,7 +1191,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 17 15:57:14 2024
+    Info: Processing started: Wed Apr 17 17:07:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Relogio -c Aula3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1300,24 +1276,25 @@ Info (12128): Elaborating entity "registradorBinario" for hierarchy "divisorGene
 Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 68
 Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 71
 Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 75
-Info (10041): Inferred latch for "saidaReg[0]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Info (10041): Inferred latch for "saidaReg[1]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Info (10041): Inferred latch for "saidaReg[2]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Info (10041): Inferred latch for "saidaReg[3]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Info (10041): Inferred latch for "saidaReg[4]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Info (10041): Inferred latch for "saidaReg[5]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Info (10041): Inferred latch for "saidaReg[6]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Info (10041): Inferred latch for "saidaReg[7]" at CPU.vhd(122) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 80
-Info (12128): Elaborating entity "muxGenerico8x1" for hierarchy "CPU:CPU|muxGenerico8x1:MUX2" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 86
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REGA" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 98
-Info (12128): Elaborating entity "subtraiConstante" for hierarchy "CPU:CPU|subtraiConstante:decrementaSUB" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 127
-Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaSUB" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 130
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REGRA" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 142
-Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaPC" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 164
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 168
-Info (12128): Elaborating entity "decoderInstru" for hierarchy "CPU:CPU|decoderInstru:DECODER" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 171
-Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:DESVIO" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 174
+Info (10041): Inferred latch for "saidaReg[0]" at CPU.vhd(126) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Info (10041): Inferred latch for "saidaReg[1]" at CPU.vhd(126) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Info (10041): Inferred latch for "saidaReg[2]" at CPU.vhd(126) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Info (10041): Inferred latch for "saidaReg[3]" at CPU.vhd(126) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Info (10041): Inferred latch for "saidaReg[4]" at CPU.vhd(126) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Info (10041): Inferred latch for "saidaReg[5]" at CPU.vhd(126) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Info (10041): Inferred latch for "saidaReg[6]" at CPU.vhd(126) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Info (10041): Inferred latch for "saidaReg[7]" at CPU.vhd(126) File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 84
+Info (12128): Elaborating entity "muxGenerico8x1" for hierarchy "CPU:CPU|muxGenerico8x1:MUX2" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 90
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REGA" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 102
+Info (12128): Elaborating entity "subtraiConstante" for hierarchy "CPU:CPU|subtraiConstante:decrementaSUB" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 131
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaSUB" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 134
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REGRA" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 146
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaPC" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 168
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 172
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "CPU:CPU|decoderInstru:DECODER" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 175
+Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:DESVIO" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 178
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUXADDR" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 186
 Info (12128): Elaborating entity "LEDS" for hierarchy "LEDS:LEDS" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 79
 Info (12128): Elaborating entity "Displays" for hierarchy "Displays:Displays" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 83
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Displays:Displays|registradorGenerico:REGD0" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Displays.vhd Line: 39
@@ -1341,15 +1318,16 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "LeituraDados[2]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
     Warning (13048): Converted tri-state node "LeituraDados[1]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
     Warning (13048): Converted tri-state node "LeituraDados[0]" into a selector File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/muxGenerico2x1.vhd Line: 10
-Warning (14026): LATCH primitive "CPU:CPU|saidaReg[0]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Warning (14026): LATCH primitive "CPU:CPU|saidaReg[2]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Warning (14026): LATCH primitive "CPU:CPU|saidaReg[1]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Warning (14026): LATCH primitive "CPU:CPU|saidaReg[3]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Warning (14026): LATCH primitive "CPU:CPU|saidaReg[4]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Warning (14026): LATCH primitive "CPU:CPU|saidaReg[5]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Warning (14026): LATCH primitive "CPU:CPU|saidaReg[6]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
-Warning (14026): LATCH primitive "CPU:CPU|saidaReg[7]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 122
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[0]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[2]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[1]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[3]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[4]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[5]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[6]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
+Warning (14026): LATCH primitive "CPU:CPU|saidaReg[7]" is permanently enabled File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/CPU.vhd Line: 126
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 15
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 15
     Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 19
     Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 19
@@ -1399,20 +1377,20 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 14
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 14
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 14
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 16
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 16
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 16
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 14
     Warning (15610): No output dependent on input pin "FPGA_RESET_N" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 18
-Info (21057): Implemented 222 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/cailu/Documents/GitHub/Relogio-VHDL/VHDL/Contador2.vhd Line: 16
+Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 61 output pins
-    Info (21061): Implemented 145 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Wed Apr 17 15:57:26 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:25
+    Info (21061): Implemented 45 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Wed Apr 17 17:07:39 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 
