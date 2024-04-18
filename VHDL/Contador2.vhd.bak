@@ -90,7 +90,7 @@ Switchs : entity work.Switchs
 			 
 Keys : entity work.Keys
 			 port map(Rr => Rd, DataOut => LeituraDados, habilita => Bloco(5), Endereco => EnderecoDec(4 downto 0), A5 => Ram_Address(5),
-			 Key0 => '0', Key1 => KEY(1), Key2 => Key(2), FPGAR => FPGA_RESET_N, CLK => CLK, RST0 => RSTkey0 and Wd,
+			 Key0 => KEY(0), Key1 => KEY(1), Key2 => Key(2), FPGAR => FPGA_RESET_N, CLK => CLK, RST0 => RSTkey0 and Wd,
 			 RST1 => RSTkey1 and Wd, RST2 => RSTkey2 and Wd, RST_FPGA => RST_FPGA and Wd);
 			 
 DecBloco : entity work.decoder3x8

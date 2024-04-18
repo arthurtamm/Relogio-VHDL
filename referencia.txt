@@ -22,6 +22,8 @@ Valor dos milhares - RAM[24]
 Valor dos dezena de milhares - RAM[25]
 Valor das centenas de milhares - RAM[26]
 
+Valor de limite de cada casa - RAM[50]
+
 LED de overflow - RAM[258]
 LED de limite atingido - RAM[257]
 
