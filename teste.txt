@@ -1,0 +1,18 @@
+inicio:
+JSR @pulo1
+LDI $2
+STA @256
+JMP @inicio
+
+pulo1:
+JSR @pulo2
+RET
+
+pulo2:
+JSR @pulo3
+LDI $1
+STA @256
+RET
+
+pulo3:
+RET

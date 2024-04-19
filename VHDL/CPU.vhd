@@ -5,7 +5,8 @@ entity CPU is
   -- Total de bits das entradas e saidas
   generic ( larguraDados : natural := 8;
 		  larguraAddr: natural := 9;
-		  larguraInst : natural := 15
+		  larguraInst : natural := 15;
+		  larguraRam : natural := 6
   );
   port   (
 	 CLK : in std_logic;
@@ -55,19 +56,12 @@ architecture arquitetura of CPU is
   signal SaidaRegEqual : std_logic;
   signal SaidaRegNeg : std_logic;
   
-  signal SelMuxJMP : std_logic_vector (2 downto 0);
+  signal SelMuxJMP : std_logic_vector (1 downto 0);
   signal MuxJMPout : std_logic_vector (LarguraAddr-1 downto 0);
   signal proxPC : std_logic_vector (LarguraAddr-1 downto 0);
   signal RomAddress : std_logic_vector (LarguraAddr-1 downto 0);
-  
-  signal habA : std_logic;
-  signal habB : std_logic;
-  signal habC : std_logic;
-  signal habD : std_logic;
-  signal RethabA : std_logic;
-  signal RethabB : std_logic;
-  signal RethabC : std_logic;
-  signal RethabD : std_logic;
+  signal SubAddr : std_logic_vector(LarguraDados-1 downto 0);
+  signal EndRetorno : std_logic_vector(LarguraAddr-1 downto 0);
 
   signal EndRetorno1 : std_logic_vector (LarguraAddr-1 downto 0);
   signal EndRetorno2 : std_logic_vector (LarguraAddr-1 downto 0);
@@ -87,17 +81,15 @@ MUX1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
                  seletor_MUX => SelMux,
                  saida_MUX => saidaMux);
 				
-MUX2 :  entity work.muxGenerico8x1  generic map (larguraDados => LarguraAddr)
+MUX2 :  entity work.muxGenerico4x1  generic map (larguraDados => LarguraAddr)
         port map(entradaA_MUX => ProxPC,
                  entradaB_MUX => Instruction_N(8 downto 0),
-					  entradaC_MUX => EndRetorno1,
-					  entradaD_MUX => EndRetorno2,
-					  entradaE_MUX => EndRetorno3,
-					  entradaF_MUX => EndRetorno4,
-					  entradaG_MUX => "000000000",
-					  entradaH_MUX => "000000000",
+					  entradaC_MUX => EndRetorno,
+					  entradaD_MUX => "000000000",
                  seletor_MUX => SelMuxJMP,
                  saida_MUX => MuxJMPout);
+					  
+--Base de Registradores
 
 REGA : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
           port map (DIN => Saida_ULA, DOUT => SaidaRegA, ENABLE => Habilita_A, CLK => CLK, RST => Reset);
@@ -111,6 +103,8 @@ REGC : entity work.registradorGenerico   generic map (larguraDados => larguraDad
 REGD : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
           port map (DIN => Saida_ULA, DOUT => SaidaRegD, ENABLE => Habilita_D, CLK => CLK, RST => Reset);
 			 
+-- Seletores do registrador a ser utilizado na determinada instrução
+			 
 Habilita_A <= '1' when regSel="00" AND Habilita='1' else
 				  '0';
 		  
@@ -123,10 +117,15 @@ Habilita_C <= '1' when regSel="10" AND Habilita='1' else
 Habilita_D <= '1' when regSel="11" AND Habilita='1' else
 				  '0';
 				  
+-- Seletores da saída do registrador a ser utilizado na determinada instrução
+				  
 saidaReg <= SaidaRegA when regSel="00" else
 				SaidaRegB when regSel="01" else
 				SaidaRegC when regSel="10" else
-				SaidaRegD when regSel="11";
+				SaidaRegD when regSel="11" else
+				"00000000";
+				
+-- Registrador realimentado pelo proprio sinal somado a 1 e subtraido de 1, selecionado por um MUX
 	
 decrementaSUB :  entity work.subtraiConstante  generic map (larguraDados => LarguraDados, constante => 1)
         port map( entrada => SubOut, saida => subCounterDec);
@@ -143,17 +142,17 @@ MUXSUB :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
 REGSUB : entity work.registradorGenerico generic map (larguraDados => larguraDados)
 			 port map (DIN => subCounter, DOUT => SubOut, ENABLE => HabilitaEscritaRetorno OR RET, CLK => CLK, RST => Reset);
 			 
-REGRA : entity work.registradorGenerico   generic map (larguraDados => larguraAddr)
-          port map (DIN => proxPC, DOUT => EndRetorno1, ENABLE => HabilitaEscritaRetorno AND habA, CLK => CLK, RST => Reset);
+-- Banco de registradores com Mux que seleciona endereço de leitura e escrita específicos para pilha
 			 
-REGRB : entity work.registradorGenerico   generic map (larguraDados => larguraAddr)
-          port map (DIN => proxPC, DOUT => EndRetorno2, ENABLE => HabilitaEscritaRetorno AND habB, CLK => CLK, RST => Reset);
+RAMREGS : entity work.memoriaRAM  generic map (dataWidth => larguraAddr, addrWidth => larguraDados)
+			 port map (addr => subAddr, we => HabilitaEscritaRetorno, re => RET,
+			 habilita => '1', dado_in => proxPC, dado_out => EndRetorno, clk => CLK);
 			 
-REGRC : entity work.registradorGenerico   generic map (larguraDados => larguraAddr)
-          port map (DIN => proxPC, DOUT => EndRetorno3, ENABLE => HabilitaEscritaRetorno AND habC, CLK => CLK, RST => Reset);
-	
-REGRD : entity work.registradorGenerico   generic map (larguraDados => larguraAddr)
-          port map (DIN => proxPC, DOUT => EndRetorno4, ENABLE => HabilitaEscritaRetorno AND habD, CLK => CLK, RST => Reset);
+MUXPM :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
+        port map( entradaA_MUX => subOut,
+                 entradaB_MUX =>  subCounterDec,
+                 seletor_MUX => RET,
+                 saida_MUX => subAddr);
 			 	 
 REGequal : entity work.registradorBinario 
 			port map (DIN => ULA_Equal, DOUT => SaidaRegEqual, ENABLE => Habilita_Flag, CLK => CLK, RST => Reset);
@@ -161,23 +160,24 @@ REGequal : entity work.registradorBinario
 REGneg : entity work.registradorBinario 
 			port map (DIN => saida_ULA(7), DOUT => SaidaRegNeg, ENABLE => Habilita_Flag_L, CLK => CLK, RST => Reset);
 
--- O port map completo do Program Counter.
 PC : entity work.registradorGenerico   generic map (larguraDados => LarguraAddr)
           port map (DIN => MuxJMPout, DOUT => RomAddress, ENABLE => '1', CLK => CLK, RST => Reset);
 
 incrementaPC :  entity work.somaConstante  generic map (larguraDados => LarguraAddr, constante => 1)
         port map(entrada => RomAddress, saida => proxPC);
-
--- O port map completo da ULA:
+		  
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
           port map (entradaA => SaidaReg, entradaB => saidaMux, saida => Saida_ULA, seletor => Operacao_ULA);
 			 
 DECODER : entity work.decoderInstru
 			 port map (opcode => Instruction_N(14 downto 11), saida => Sinais_Controle, Equal => SaidaRegEqual, Neg => SaidaRegNeg);	  
 
+-- Logica de Desvio para seleção do Mux seletor de endereços da ROM
+
 DESVIO : entity work.logicaDesvio
-			 port map(RET => RET, JMP => JMP, saida => SelMuxJMP,
-			 habA => RethabA, habB => RethabB, habC => RethabC, habD => RethabD);
+			 port map(RET => RET, JMP => JMP, saida => SelMuxJMP);
+			 
+-- Registrador que armazena endereço para instruções LDIDDR e STADDR
 			 
 REGADDR : entity work.registradorGenerico   generic map (larguraDados => larguraAddr)
           port map (DIN => Instruction_N(8 downto 0), DOUT => SaidaRegAddr, ENABLE => Habilita_Reg_Addr, CLK => CLK, RST => Reset);
@@ -203,30 +203,6 @@ Habilita_Flag <= Sinais_Controle(2);
 
 ULA_Equal <= NOT (saida_ULA(7) OR saida_ULA(6) OR saida_ULA(5) OR saida_ULA(4) OR saida_ULA(3)
 OR saida_ULA(2) OR saida_ULA(1) OR saida_ULA(0));
-
-habA <= '1' when SubOut="00000000" else
-		  '0';
-		  
-habB <= '1' when SubOut="00000001" else
-		  '0';
-		  
-habC <= '1' when SubOut="00000010" else
-		  '0';
-		  
-habD <= '1' when SubOut="00000011" else
-		  '0';
-		  
-RethabA <= '1' when SubOut="00000001" else
-			'0';
-			
-RethabB <= '1' when SubOut="00000010" else
-			'0';
-			
-RethabC <= '1' when SubOut="00000011" else
-			'0';
-			
-RethabD <= '1' when SubOut="00000100" else
-			'0';
 
 Rd <= Sinais_Controle(1);
 Wd <= Sinais_controle(0);

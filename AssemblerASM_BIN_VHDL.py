@@ -72,9 +72,9 @@ Regras:
 
 
 
-inputASM = 'entrada.txt' #Arquivo de entrada de contém o assembly
+inputASM = 'teste.txt' #Arquivo de entrada de contém o assembly
 outputBIN = 'saida.txt' #Arquivo de saída que contém o binário formatado para VHDL
-outputMIF = 'initROM.mif' #Arquivo de saída que contém o binário formatado para .mif
+outputMIF = 'saida_teste.mif' #Arquivo de saída que contém o binário formatado para .mif
 
 noveBits = True
 

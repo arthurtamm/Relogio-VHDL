@@ -22,9 +22,6 @@ architecture interface of divisorGenerico_e_Interface is
   signal base_tempo_finale : std_logic;
 begin
 
-
---Diversas bases de tempo selecionadas por um sinal de entrada ligados aos switchs, possibilitando a aceleração da velocidade de contagem
-
 baseTempo: entity work.divisorGenerico
            generic map (divisor => 25000000) 
            port map (clk => clk, saida_clk => saidaclk_reg1seg);

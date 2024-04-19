@@ -47,7 +47,7 @@ LDI $10 #Carrega o acumulador com  valor 10
 STA @10 #Criando a constante 10
 
 LDI $15 #Carrega o acumulador com  valor 15
-STA @115 #Criando a constante 15
+STA @40 #Criando a constante 15
 
 LDI $0 #Carrega o acumulador com  valor 0
 STA @21 #Maximo valor das unidades do limite
@@ -225,6 +225,7 @@ STA @256 #Acende o LEDR4 para indicar que está configurando as dezenas do limit
 
 aguardaKey1_2:
 LDA @320 #Lê SW0-SW7
+AND1 @40
 CLT @4 #Compara com o valor 4
 JL @desvio_unidades_hora #Se for menor do que 4, armazena o valor
 
@@ -313,6 +314,7 @@ RET #Retorna ao loop principal
 
 aguardaKey1:
 LDA @320 #Lê SW0-SW7
+AND1 @40
 CLT @50 #Compara com o limite da casa
 JL @desvio_aguardaKey1 #Se for menor do que 2, armazena o valor
 LDA @50 #Se não for, carrega o acumulador com o limite da casa
