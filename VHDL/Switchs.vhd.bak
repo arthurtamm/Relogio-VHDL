@@ -14,14 +14,6 @@ entity Switchs is
 );
 end entity;
 
--- CLK : Clock
--- Rr : Sinal de habilita leitura
--- DataOut : Saída de sinais lidos
--- Habilita : Endereçamento referente ao bloco de switchs e keys
--- Endereco : Endereçamento referente a qual Switch será lido
--- A5 : Quinto bit de endereçamento, definindo a leitura dos switchs (no caso Not A5)
--- SW : Sinais dos Switchs
-
 architecture comportamento of Switchs is
 
   signal HabilitaSW1 : std_logic;

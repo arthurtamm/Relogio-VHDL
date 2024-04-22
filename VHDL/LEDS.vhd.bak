@@ -15,14 +15,6 @@ entity LEDS is
 );
 end entity;
 
--- CLK : Clock
--- Wr : Sinal de habilita escrita
--- DataIn : Entrada de dados a ser escrito
--- Habilita : Endereçamento referente ao bloco de leds e displays
--- Endereco : Endereçamento referente a qual LED será acionado
--- A5 : Quinto bit de endereçamento, definindo a leitura dos leds (no caso Not A5)
--- LED : Saídas dos sinais de LED
-
 architecture comportamento of LEDS is
 
   signal SaidaRLEDR : std_logic_vector (7 downto 0);

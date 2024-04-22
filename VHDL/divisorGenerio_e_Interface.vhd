@@ -41,6 +41,8 @@ baseTempo4: entity work.divisorGenerico
            generic map (divisor => 2500)   
            port map (clk => clk, saida_clk => saidaclk_regMizerosseg);
 			  
+-- Seletor do MUX de decisão da base de tempo em função dos sinais externos recebidos
+			  
 seletor <= "00" when acelera = '0' AND acelera2 = '0' else
 			  "01" when acelera = '0' AND acelera2 = '1' else
 			  "10" when acelera = '1' AND acelera2 = '0' else

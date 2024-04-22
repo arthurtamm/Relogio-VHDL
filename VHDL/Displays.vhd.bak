@@ -18,14 +18,6 @@ entity Displays is
 );
 end entity;
 
--- CLK : Clock
--- Wr : Sinal de habilita escrita
--- DataIn : Entrada de dados a ser escrito
--- Habilita : Endereçamento referente ao bloco de leds e displays
--- Endereco : Endereçamento referente a qual Display será acionado
--- A5 : Quinto bit de endereçamento, definindo a leitura dos displays
--- D : Saídas dos sinais de Display
-
 architecture comportamento of Displays is
 
   signal SaidaD0 : std_logic_vector (3 downto 0);

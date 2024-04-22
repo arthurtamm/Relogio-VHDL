@@ -20,15 +20,6 @@ entity Keys is
 );
 end entity;
 
--- CLK : Clock
--- Rr : Sinal de habilita leitura
--- DataOut : Saída de sinais lidos
--- Habilita : Endereçamento referente ao bloco de switchs e keys
--- Endereco : Endereçamento referente a qual Key será lida
--- A5 : Quinto bit de endereçamento, definindo a leitura das keys
--- RST : sinais referentes ao resets dos flip flops de cada key
--- Key : Sinais das chaves
-
 architecture comportamento of Keys is
 
   signal HabilitaK0 : std_logic;

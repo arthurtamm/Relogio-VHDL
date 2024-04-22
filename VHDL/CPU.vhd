@@ -148,12 +148,17 @@ RAMREGS : entity work.memoriaRAM  generic map (dataWidth => larguraAddr, addrWid
 			 port map (addr => subAddr, we => HabilitaEscritaRetorno, re => RET,
 			 habilita => '1', dado_in => proxPC, dado_out => EndRetorno, clk => CLK);
 			 
+			 
+-- Seleciona se o ponteiro apontarà para posição de escrita ou leitura da RAM
+
 MUXPM :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
         port map( entradaA_MUX => subOut,
                  entradaB_MUX =>  subCounterDec,
                  seletor_MUX => RET,
                  saida_MUX => subAddr);
 			 	 
+-- Flip Flops que acumulam flags de comparação
+
 REGequal : entity work.registradorBinario 
 			port map (DIN => ULA_Equal, DOUT => SaidaRegEqual, ENABLE => Habilita_Flag, CLK => CLK, RST => Reset);
 			
@@ -182,6 +187,7 @@ DESVIO : entity work.logicaDesvio
 REGADDR : entity work.registradorGenerico   generic map (larguraDados => larguraAddr)
           port map (DIN => Instruction_N(8 downto 0), DOUT => SaidaRegAddr, ENABLE => Habilita_Reg_Addr, CLK => CLK, RST => Reset);
 			 
+-- MUX que altera sinal de saída de endereçamento do valor imediato para valor do registrador ADDR
 			 
 MUXADDR :  entity work.muxGenerico2x1  generic map (larguraDados => larguraAddr)
         port map( entradaA_MUX => Instruction_N(8 downto 0),
